@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hera Zenter — Guía de Estilo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Questrial&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal:#424949; --slate:#788991; --sage:#8D957E;
+    --terracotta:#9A4215; --ivory:#E4D6C6;
+    --gold:#B8A87A; --deep-blue:#185FA5; --ivory-light:#FAF8F3; --gray-warm:#3D3D3D;
+    --font-display:"Cormorant Garamond",Georgia,serif; /* fallback de Michelia */
+    --font-body:"Questrial","Century Gothic",sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:var(--font-body);
+    color:var(--charcoal);
+    background:var(--ivory-light);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 32px}
+  section{padding:72px 0;border-bottom:1px solid rgba(66,73,73,.08)}
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--terracotta);margin-bottom:14px;
+  }
+  h2{font-family:var(--font-display);font-weight:500;font-size:2.1rem;letter-spacing:.01em;margin-bottom:6px}
+  .sub{color:var(--slate);font-size:.95rem;max-width:46ch;margin-bottom:36px}
+
+  /* Hero */
+  .hero{
+    background:var(--sage);color:var(--ivory-light);
+    padding:96px 0 88px;text-align:center;border:none;
+  }
+  .hero .lotus{font-size:2.4rem;margin-bottom:8px;opacity:.9}
+  .hero h1{font-family:var(--font-display);font-weight:400;font-size:5.2rem;line-height:.95;letter-spacing:.01em}
+  .hero .zenter{
+    font-family:var(--font-body);letter-spacing:.55em;
+    text-transform:uppercase;font-size:1rem;padding-left:.55em;margin-top:4px;
+  }
+  .hero p{margin-top:26px;font-size:1.02rem;opacity:.85;max-width:40ch;margin-left:auto;margin-right:auto}
+
+  /* Logos */
+  .logos{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .logo-card{
+    background:var(--ivory);border-radius:20px;padding:40px;
+    display:flex;align-items:center;justify-content:center;min-height:200px;
+  }
+  .logo-card.dark{background:var(--charcoal)}
+  .logo-card img{max-width:72%;max-height:140px;object-fit:contain}
+  .logo-label{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-top:12px;text-align:center}
+
+  /* Color */
+  .swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .swatch .chip{height:120px;border-radius:16px;box-shadow:0 4px 20px rgba(66,73,73,.08)}
+  .swatch .name{font-size:.85rem;margin-top:12px;font-weight:600;color:var(--gray-warm)}
+  .swatch .hex{font-size:.78rem;color:var(--slate);letter-spacing:.04em}
+  .swatch .role{font-size:.72rem;color:var(--slate);margin-top:2px;line-height:1.35}
+  .accents{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+  .accents .mini{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--slate)}
+  .accents .dot{width:22px;height:22px;border-radius:50%}
+
+  /* Type */
+  .type-row{padding:22px 0;border-bottom:1px dashed rgba(66,73,73,.14)}
+  .type-row:last-child{border:none}
+  .type-meta{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);margin-bottom:8px}
+  .display-xl{font-family:var(--font-display);font-size:3.4rem;font-weight:500;line-height:1.05}
+  .display-lg{font-family:var(--font-display);font-size:2.4rem;font-weight:500}
+  .body-lg{font-size:1.05rem}
+  .caption{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+
+  /* Components */
+  .components{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .btn{font-family:var(--font-body);font-size:.95rem;padding:14px 30px;border-radius:999px;border:none;cursor:pointer;transition:.25s}
+  .btn-primary{background:var(--terracotta);color:var(--ivory-light)}
+  .btn-primary:hover{background:var(--gray-warm)}
+  .btn-ghost{background:transparent;color:var(--charcoal);border:1.5px solid var(--sage)}
+  .btn-ghost:hover{background:var(--sage);color:var(--ivory-light)}
+  .card{
+    background:#fff;border-radius:20px;overflow:hidden;width:260px;
+    box-shadow:0 12px 40px rgba(66,73,73,.10)
+  }
+  .card .ph{height:120px;background:var(--slate)}
+  .card .band{background:var(--gold);color:#fff;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;padding:7px 16px}
+  .card .body{padding:18px}
+  .card h4{font-family:var(--font-display);font-weight:600;font-size:1.25rem;margin-bottom:4px}
+  .card p{font-size:.82rem;color:var(--slate);margin-bottom:14px}
+  .pill{display:inline-block;background:var(--ivory);color:var(--charcoal);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin:0 6px 8px 0}
+
+  footer{padding:48px 0;text-align:center;color:var(--slate);font-size:.8rem}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="lotus">&#10047;</div>
+  <h1>Hera</h1>
+  <div class="zenter">Zenter</div>
+  <p>Estudio boutique de bienestar en Guadalajara. Pilates · Barre · Yoga.</p>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">01 — Esencia</div>
+    <h2>Voz de marca</h2>
+    <p class="sub">Cálida, cercana y profesional. Nunca forzada ni robótica.</p>
+    <div>
+      <span class="pill">Bienestar</span><span class="pill">Elegancia</span>
+      <span class="pill">Serenidad</span><span class="pill">Comunidad</span>
+      <span class="pill">Autenticidad</span><span class="pill">Transformación</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">02 — Logotipo</div>
+    <h2>Marca</h2>
+    <p class="sub">Wordmark con flor de loto e isotipo monograma H en óvalo para usos compactos.</p>
+    <div class="logos">
+      <div>
+        <div class="logo-card"><img src="logos/Logo_Hera.png" alt="Logo Hera Zenter"></div>
+        <div class="logo-label">Logotipo principal</div>
+      </div>
+      <div>
+        <div class="logo-card dark"><img src="logos/Logo_H.png" alt="Monograma H"></div>
+        <div class="logo-label">Isotipo / monograma</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">03 — Color</div>
+    <h2>Paleta</h2>
+    <p class="sub">Cinco colores core del brandboard oficial, más acentos de uso web.</p>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#424949"></div><div class="name">Charcoal</div><div class="hex">#424949</div><div class="role">Texto · fondos profundos</div></div>
+      <div class="swatch"><div class="chip" style="background:#788991"></div><div class="name">Slate</div><div class="hex">#788991</div><div class="role">Secundario · serenidad</div></div>
+      <div class="swatch"><div class="chip" style="background:#8D957E"></div><div class="name">Sage</div><div class="hex">#8D957E</div><div class="role">Primario de marca</div></div>
+      <div class="swatch"><div class="chip" style="background:#9A4215"></div><div class="name">Terracotta</div><div class="hex">#9A4215</div><div class="role">Acento · CTAs</div></div>
+      <div class="swatch"><div class="chip" style="background:#E4D6C6;box-shadow:inset 0 0 0 1px rgba(66,73,73,.12)"></div><div class="name">Ivory</div><div class="hex">#E4D6C6</div><div class="role">Fondos claros</div></div>
+    </div>
+    <div class="accents">
+      <div class="mini"><span class="dot" style="background:#B8A87A"></span>Gold #B8A87A</div>
+      <div class="mini"><span class="dot" style="background:#185FA5"></span>Deep Blue #185FA5</div>
+      <div class="mini"><span class="dot" style="background:#FAF8F3;box-shadow:inset 0 0 0 1px rgba(66,73,73,.15)"></span>Ivory Light #FAF8F3</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">04 — Tipografía</div>
+    <h2>Sistema tipográfico</h2>
+    <p class="sub">Michelia para títulos (aquí previsualizada con su fallback Cormorant Garamond). Questrial para cuerpo y UI.</p>
+    <div class="type-row">
+      <div class="type-meta">Display · Michelia</div>
+      <div class="display-xl">Transforma tu cuerpo</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">Heading · Michelia</div>
+      <div class="display-lg">Aire · Tierra · Fuego · Agua</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">Body · Questrial</div>
+      <div class="body-lg">Un espacio para reconectar contigo. Clases de bajo impacto, coaches certificados y una comunidad que te acompaña en cada sesión.</div>
+    </div>
+    <div class="type-row">
+      <div class="type-meta">Caption · Questrial</div>
+      <div class="caption">Programa Fuego · 45 días</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">05 — Componentes</div>
+    <h2>UI base</h2>
+    <p class="sub">Botones de esquinas redondeadas tipo píldora y tarjeta con banda dorada.</p>
+    <div class="components">
+      <button class="btn btn-primary">Agendar clase muestra</button>
+      <button class="btn btn-ghost">Conocer el estudio</button>
+      <div class="card">
+        <div class="ph"></div>
+        <div class="band">Beneficio Hera</div>
+        <div class="body">
+          <h4>Programa Fuego</h4>
+          <p>Barre + Reformer + Mat. Cambios visibles en 45 días.</p>
+          <button class="btn btn-primary" style="font-size:.82rem;padding:10px 22px">Reservar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Hera Zenter — Design System · Guadalajara, Jalisco</footer>
+
+</body>
+</html>

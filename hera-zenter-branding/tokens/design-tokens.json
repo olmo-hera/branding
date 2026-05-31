@@ -1,0 +1,72 @@
+{
+  "$schema": "https://design-tokens.org/schema.json",
+  "brand": {
+    "name": "Hera Zenter",
+    "description": "Estudio boutique de bienestar en Guadalajara: Pilates Reformer, Pilates Mat, Barre y Yoga.",
+    "attributes": ["bienestar", "elegancia", "serenidad", "comunidad", "autenticidad", "transformacion"]
+  },
+  "color": {
+    "core": {
+      "charcoal":   { "value": "#424949", "comment": "Gris verdoso oscuro. Texto principal, fondos profundos." },
+      "slate":      { "value": "#788991", "comment": "Azul gris. Secundario, serenidad." },
+      "sage":       { "value": "#8D957E", "comment": "Verde salvia. Color primario de marca." },
+      "terracotta": { "value": "#9A4215", "comment": "Terracota. Acento calido, llamados a la accion." },
+      "ivory":      { "value": "#E4D6C6", "comment": "Ivory / arena. Fondos claros, espacio de respiracion." }
+    },
+    "accents_web": {
+      "gold":          { "value": "#B8A87A", "comment": "Dorado. Detalles premium, bandas, separadores." },
+      "deep-blue":     { "value": "#185FA5", "comment": "Azul profundo. Acento en uso web." },
+      "terracotta-lt": { "value": "#C65A28", "comment": "Terracota clara." },
+      "terracotta-dk": { "value": "#993C1D", "comment": "Terracota oscura." },
+      "sage-deep":     { "value": "#5C7553", "comment": "Verde salvia profundo." },
+      "ivory-light":   { "value": "#FAF8F3", "comment": "Ivory claro de fondo web." },
+      "gray-warm":     { "value": "#3D3D3D", "comment": "Gris calido para texto en web." }
+    },
+    "semantic": {
+      "bg":            { "value": "{color.core.ivory}" },
+      "bg-alt":        { "value": "{color.accents_web.ivory-light}" },
+      "text":          { "value": "{color.core.charcoal}" },
+      "text-muted":    { "value": "{color.core.slate}" },
+      "primary":       { "value": "{color.core.sage}" },
+      "accent":        { "value": "{color.core.terracotta}" },
+      "highlight":     { "value": "{color.accents_web.gold}" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "display": { "value": "Michelia, 'Cormorant Garamond', Georgia, serif", "comment": "Titulos y display. Serif elegante con caracter." },
+      "body":    { "value": "Questrial, 'Century Gothic', 'Futura', sans-serif", "comment": "Cuerpo y UI. Sans limpia y ligera." }
+    },
+    "weight": {
+      "regular": { "value": "400" },
+      "medium":  { "value": "500" },
+      "semibold":{ "value": "600" }
+    },
+    "scale": {
+      "display": { "value": "3.5rem",  "lineHeight": "1.05", "family": "{typography.fontFamily.display}" },
+      "h1":      { "value": "2.5rem",  "lineHeight": "1.1",  "family": "{typography.fontFamily.display}" },
+      "h2":      { "value": "1.875rem","lineHeight": "1.2",  "family": "{typography.fontFamily.display}" },
+      "h3":      { "value": "1.375rem","lineHeight": "1.3",  "family": "{typography.fontFamily.display}" },
+      "body":    { "value": "1rem",    "lineHeight": "1.6",  "family": "{typography.fontFamily.body}" },
+      "small":   { "value": "0.875rem","lineHeight": "1.5",  "family": "{typography.fontFamily.body}" },
+      "caption": { "value": "0.75rem", "lineHeight": "1.4",  "family": "{typography.fontFamily.body}", "letterSpacing": "0.08em", "textTransform": "uppercase" }
+    }
+  },
+  "radius": {
+    "sm":   { "value": "8px" },
+    "md":   { "value": "16px" },
+    "lg":   { "value": "28px" },
+    "pill": { "value": "999px" }
+  },
+  "spacing": {
+    "xs": { "value": "4px" },
+    "sm": { "value": "8px" },
+    "md": { "value": "16px" },
+    "lg": { "value": "32px" },
+    "xl": { "value": "64px" }
+  },
+  "shadow": {
+    "soft":   { "value": "0 4px 20px rgba(66, 73, 73, 0.08)" },
+    "raised": { "value": "0 12px 40px rgba(66, 73, 73, 0.12)" }
+  }
+}

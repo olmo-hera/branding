@@ -1,0 +1,52 @@
+/* ============================================================
+   Hera Zenter — Design Tokens (CSS Custom Properties)
+   Importa este archivo en cualquier proyecto: @import "colors.css";
+   ============================================================ */
+
+:root {
+  /* --- Paleta core (brandboard oficial) --- */
+  --hera-charcoal:    #424949; /* texto principal / fondos profundos */
+  --hera-slate:       #788991; /* secundario / serenidad */
+  --hera-sage:        #8D957E; /* primario de marca */
+  --hera-terracotta:  #9A4215; /* acento calido / CTAs */
+  --hera-ivory:       #E4D6C6; /* fondos claros */
+
+  /* --- Acentos en uso web --- */
+  --hera-gold:           #B8A87A;
+  --hera-deep-blue:      #185FA5;
+  --hera-terracotta-lt:  #C65A28;
+  --hera-terracotta-dk:  #993C1D;
+  --hera-sage-deep:      #5C7553;
+  --hera-ivory-light:    #FAF8F3;
+  --hera-gray-warm:      #3D3D3D;
+
+  /* --- Roles semanticos --- */
+  --bg:          var(--hera-ivory);
+  --bg-alt:      var(--hera-ivory-light);
+  --text:        var(--hera-charcoal);
+  --text-muted:  var(--hera-slate);
+  --primary:     var(--hera-sage);
+  --accent:      var(--hera-terracotta);
+  --highlight:   var(--hera-gold);
+
+  /* --- Tipografia --- */
+  --font-display: "Michelia", "Cormorant Garamond", Georgia, serif;
+  --font-body:    "Questrial", "Century Gothic", "Futura", sans-serif;
+
+  /* --- Radios --- */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* --- Espaciado --- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+
+  /* --- Sombras --- */
+  --shadow-soft:   0 4px 20px rgba(66, 73, 73, 0.08);
+  --shadow-raised: 0 12px 40px rgba(66, 73, 73, 0.12);
+}
